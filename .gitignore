@@ -8,4 +8,3 @@ dist
 build
 .DS_Store
 .next/
-.env.local
