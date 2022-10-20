@@ -10,6 +10,9 @@ First, run the development server:
 npm run dev
 ```
 
+Live: 
+[https://d219q8hb0tp7wk.cloudfront.net/](https://d219q8hb0tp7wk.cloudfront.net/)
+
 ## Stack 
 
 - Next / React / Typescript

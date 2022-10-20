@@ -1,14 +1,16 @@
-import { useAtom } from 'jotai'
-import { SessionEvent, sessionUrlAtom } from '../../lib/store';
-import { database } from '../../lib/firebase';
 import { useQuery } from '@tanstack/react-query';
 import { doc, getDoc } from 'firebase/firestore';
+import { database } from '../../lib/firebase';
+import { SessionEvent } from '../../lib/store';
 
-function SessionStudio() {
-  const [sessionUrl] = useAtom(sessionUrlAtom)
+type SessionStudioProps = {
+  code: string;
+};
+
+function SessionStudio({ code }: SessionStudioProps) {
 
   const { data, isLoading } = useQuery(['sessionData'], async () => {
-    const docRef = doc(database, "livecode_sessions", sessionUrl);
+    const docRef = doc(database, "livecode_sessions", code as string);
     const docSnap = await getDoc(docRef);
     
     if (docSnap.exists()) {
@@ -16,7 +18,6 @@ function SessionStudio() {
     } 
     return null
   })
-
 
   return (
     <div className="grid grid-cols-3 h-screen w-screen">
