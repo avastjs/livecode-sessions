@@ -4,7 +4,7 @@ import SessionStudio from '../../components/organisms/SessionStudio';
 function Live() {
   const router = useRouter()
   
-  const liveCode = router.query?.live as string
+  const liveCode = router.query?.code as string
 
   return (
     <>

@@ -47,7 +47,7 @@ function SessionForm() {
               Generate Room
             </button>
             {sessionUrl && <div>
-              <Link href="/sessions/[live]" as={`/sessions/${sessionUrl}`} >
+              <Link href={`/sessions?code=${sessionUrl}`} >
                 <button type="button" className="shadow bg-pink-500 hover:bg-pink-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
                   Go to session
                 </button>
