@@ -4,6 +4,7 @@ node_modules
 .output
 out/
 .env
+.env.local
 dist
 build
 .DS_Store
