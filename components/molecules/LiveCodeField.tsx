@@ -10,8 +10,11 @@ function LiveCodeField() {
     setSessionForm({ ...sessionForm, live_url: e.target.value })
 
   return (
-    <Field title="Sandbox Live Url" value={sessionForm.live_url} handleChange={handleChange} 
-      placeholder="https://codesandbox.io/live/0abfc5c4672..." />
+    <>
+      <div className='text-right opacity-50'> e.g. codesandbox live </div>
+      <Field title="Sandbox Live Url" value={sessionForm.live_url} handleChange={handleChange}
+        placeholder="https://codesandbox.io/live/0abfc5c4672..." />
+    </>
   )
 }
 

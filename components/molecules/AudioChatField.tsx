@@ -10,8 +10,11 @@ function AudioChatField() {
     setSessionForm({ ...sessionForm, audio_chat: e.target.value })
 
   return (
-    <Field title="Audio Streaming Url" value={sessionForm.audio_chat} handleChange={handleChange} 
-      placeholder="https://spooncast.net/us/live/@w08kqj8k?utm_source=spoonshare..."/>
+    <>
+      <div className='text-right opacity-50'> e.g. spoon live </div>
+      <Field title="Audio Streaming Url" value={sessionForm.audio_chat} handleChange={handleChange}
+        placeholder="https://spooncast.net/us/live/@w08kqj8k?utm_source=spoonshare..." />
+    </>
   )
 }
 

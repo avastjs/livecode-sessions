@@ -10,8 +10,11 @@ function LiveDrawField() {
     setSessionForm({ ...sessionForm, live_draw_url: e.target.value })
 
   return (
-    <Field title="Excalidraw Live Url" value={sessionForm.live_draw_url} handleChange={handleChange} 
-      placeholder="https://excalidraw.com/#room=5c33d96491b75a68e34..."/>
+    <>
+      <div className='text-right opacity-50'> e.g. excalidraw live session </div>
+      <Field title="Excalidraw Live Url" value={sessionForm.live_draw_url} handleChange={handleChange}
+        placeholder="https://excalidraw.com/#room=5c33d96491b75a68e34..." />
+    </>
   )
 }
 
