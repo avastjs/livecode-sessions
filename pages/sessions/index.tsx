@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import ShareButton from '../../components/molecules/ShareButton';
 import SessionStudio from '../../components/organisms/SessionStudio';
 
 function Live() {
@@ -9,6 +10,7 @@ function Live() {
   return (
     <>
       { liveCode && <SessionStudio code={liveCode} /> }
+      <ShareButton />
     </>
   )
 }
