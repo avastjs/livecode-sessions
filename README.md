@@ -13,7 +13,8 @@ npm run dev
 ## Stack 
 
 - Next / React / Typescript
-- Redux + @reduxjs/toolkit
+- Jotai 
+- React Query 
 - TailWind CSS 3
 - Atomic Design
 - Firebase

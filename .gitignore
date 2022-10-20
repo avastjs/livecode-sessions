@@ -2,6 +2,7 @@ node_modules
 *.log*
 .cache
 .output
+out/
 .env
 dist
 build
