@@ -16,7 +16,7 @@ It is just a simple desk app which puts 3 apps together (code, audio, draw) in a
 ### Desktop App (Session Studio): 
 
 
-Windows: Soon
+Windows: [Download here](https://github.com//avastjs/livecode-sessions-desktop/raw/f7d41c75af08f93a45ea84c7991c7104b7123691/out/make/squirrel.windows/x64/livecode-session-studio-1.0.0%20Setup.exe)
 
 MacOS: [Download here](https://github.com/avastjs/livecode-sessions-desktop/raw/78410df0bfb4a4724c0dda1ad5c9b53d736663f2/out/make/zip/darwin/x64/livecode-session-studio-darwin-x64-1.0.0.zip)
 
