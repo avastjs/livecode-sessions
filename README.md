@@ -10,14 +10,15 @@ It is just a simple desk app which puts 3 apps together (code, audio, draw) in a
 
 ## Downloads
 
-### Website (to create room): 
-[https://livecode-sessions.vercel.app/](https://livecode-sessions.vercel.app/)
+### Website (create room and download the app): 
+[https://live.vastjs.io/](https://live.vastjs.io/)
 
 ### Desktop App (Session Studio): 
 
-Windows: 
 
-MacOS: 
+Windows: Soon
+
+MacOS: [Download here](https://github.com/avastjs/livecode-sessions-desktop/raw/78410df0bfb4a4724c0dda1ad5c9b53d736663f2/out/make/zip/darwin/x64/livecode-session-studio-darwin-x64-1.0.0.zip)
 
 ## Apps Recommended
 
@@ -49,7 +50,7 @@ Share de code
 
 
 ### 2) Creator / Audience / Students
-Download desktop app and enter the code: 
+Download desktop app from https://live.vastjs.io/ and enter the code: 
 ![Alt text](s4.png "Title")
 
 Student/Collaborators Studio: 

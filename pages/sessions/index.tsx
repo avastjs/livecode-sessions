@@ -6,6 +6,7 @@ import EnterButton from '../../components/molecules/EnterButton';
 import SessionStudio from '../../components/organisms/SessionStudio';
 import { codeAtom, isElectronAtom, SessionEvent } from '../../lib/store';
 import { database } from '../../lib/firebase';
+import { DefaultTemplate } from '../../components/templates/DefaultTemplate';
 
 
 function Live() {
@@ -14,7 +15,7 @@ function Live() {
   const [isElectron, setIsElectron] = useAtom(isElectronAtom)
   const [code] = useAtom(codeAtom)
 
-  useEffect(() =>{
+  useEffect(() => {
     const userAgent = navigator.userAgent.toLowerCase();
     if (userAgent.indexOf('electron/') > -1 && sessionData) {
       const electronAPI = (window as any).electronAPI
@@ -41,20 +42,19 @@ function Live() {
   }
 
   return (
-    <>
+    <DefaultTemplate>
       {sessionData
         ? <SessionStudio sessionData={sessionData} />
-        : <div className="grid place-items-center h-screen">
-          <div className='flex flex-col relative p-10 opacity-90 rounded-md border-8 border-rose-500 bg-gradient-to-r from-green-400 to-blue-500'>
-            <CodeField />
-            <EnterButton handleClick={enterRoom} />
-            <div className='py-4 text-red-500'>
-              {error}
-            </div>
+        :
+        <div className='flex flex-col relative p-10 opacity-90 rounded-md border-8 border-rose-500 bg-gradient-to-r from-green-400 to-blue-500'>
+          <CodeField />
+          <EnterButton handleClick={enterRoom} />
+          <div className='py-4 text-red-500'>
+            {error}
           </div>
         </div>
       }
-    </>
+    </DefaultTemplate>
   )
 }
 

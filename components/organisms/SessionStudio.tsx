@@ -10,7 +10,7 @@ function SessionStudio({ sessionData }: SessionStudioProps) {
   const [code] = useAtom(codeAtom)
 
   return (
-    <div className="grid place-items-center h-screen">
+    <>
       {
         <div className='flex flex-col relative p-14 opacity-90 rounded-md border-8 border-rose-500 bg-gradient-to-r from-green-400 to-blue-500'>
           <h1 className='text-center text-xl'>
@@ -26,7 +26,7 @@ function SessionStudio({ sessionData }: SessionStudioProps) {
           </div>
         </div>
       }
-    </div>
+    </>
   )
 }
 
