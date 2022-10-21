@@ -45,7 +45,7 @@ You can also use whatever other app as long as you have a clear share URL.
 Generate room link for your audience
 ![Alt text](s2.png "Title")
 
-Share de code
+Share the Room Code
 ![Alt text](s1.png "Title")
 
 
