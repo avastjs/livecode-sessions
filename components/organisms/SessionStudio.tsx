@@ -1,13 +1,12 @@
-import { useAtom } from 'jotai';
-import { codeAtom, SessionEvent } from '../../lib/store';
+import { SessionEvent } from '../../lib/store';
 import SLink from '../atoms/SLink';
 
 type SessionStudioProps = {
   sessionData: SessionEvent;
+  code: String;
 };
 
-function SessionStudio({ sessionData }: SessionStudioProps) {
-  const [code] = useAtom(codeAtom)
+function SessionStudio({ sessionData, code }: SessionStudioProps) {
 
   return (
     <>

@@ -22,8 +22,6 @@ export const sessionFormAtom = atom<SessionEvent>({
   tags: []
 });
 
-export const sessionUrlAtom = atom('');
-
 export const isElectronAtom = atom(false);
 
 export const codeAtom = atom('');
