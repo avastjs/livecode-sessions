@@ -25,6 +25,7 @@ function Live() {
   } 
 
   async function enterRoom() {
+    setError('')
     const sessionData = await session()
 
     const userAgent = navigator.userAgent.toLowerCase();
