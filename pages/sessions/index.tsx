@@ -13,28 +13,35 @@ function Live() {
   const [, setIsElectron] = useAtom(isElectronAtom)
   const [code,] = useAtom(codeAtom)
 
-  async function session(){
+  async function session() {
     const docRef = doc(database, "livecode_sessions", code);
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
       return docSnap.data() as SessionEvent
     } {
-      setError('Room does not exist')
+      throw new Error('Room does not exist')
     }
-  } 
+  }
 
   async function enterRoom() {
     setError('')
-    const sessionData = await session()
+    try {
+      const sessionData = await session()
+      const userAgent = navigator.userAgent.toLowerCase();
 
-    const userAgent = navigator.userAgent.toLowerCase();
-    if (userAgent.indexOf('electron/') > -1 && sessionData) {
-      const electronAPI = (window as any).electronAPI
-      electronAPI.executeApp(sessionData)
-      setIsElectron(true)
-    } else {
-      setError('You need to be under our desktop APP')
+      if (userAgent.indexOf('electron/') > -1) {
+        const electronAPI = (window as any).electronAPI
+        electronAPI.executeApp(sessionData)
+        setIsElectron(true)
+      } else {
+        throw new Error('You need to be under our desktop APP')
+      }
+    } catch (err: unknown) {
+      if (typeof err === 'object' && err !== null) {
+        setError(err.toString())
+      }
+      console.log(err)
     }
   }
 
